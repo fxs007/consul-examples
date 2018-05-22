@@ -3,6 +3,7 @@
   "server": true,
   "ui_dir": "../ui",
   "bootstrap_expect":1,
+  "enable_script_checks":true,
   "services": [
     {
       "name": "example_green",
@@ -11,7 +12,7 @@
       "checks": [
         {
           "name":"Check that is always green",
-          "script": "./check_green.sh",
+          "args": ["./check_green.sh"],
           "interval": "15s"
         }
       ]
@@ -23,7 +24,7 @@
       "checks": [
         {
           "name":"Check that always fails",
-          "script": "./check_failed.sh",
+          "args": ["./check_failed.sh"],
           "interval": "15s"
         }
       ]

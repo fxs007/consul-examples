@@ -55,7 +55,7 @@ Alternatively you can use the UI at [http://localhost:8500/ui](http://localhost:
 Now you need to open a second shell window again to see the effect of the watch. In the first window enter:
 
 ```
-consul watch -type keyprefix application/online cat 
+consul watch -type key -key application/online cat 
 ```
 
 Each time the value of the key changes Consul will call the command (cat in this case) and provides all information about the event as JSON. 
